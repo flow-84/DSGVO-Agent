@@ -9,7 +9,6 @@
 
 
 .button {
-  background-image: url('../public/new-button-image.png'); /* Update to the new button image */
   background-color: red; /* Keep button color red */
   color: white; /* Set button text color to white for contrast */
 }
