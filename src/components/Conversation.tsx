@@ -13,20 +13,20 @@ export function Conversation({ isListening, onStatusChange }: ConversationProps)
   const conversation = useConversation({
     apiKey: import.meta.env.VITE_ELEVENLABS_API_KEY,
     onConnect: () => {
-      console.log('Connected to ElevenLabs');
+      console.log('Connected');
       conversationStarted.current = true;
       onStatusChange(true);
     },
     onDisconnect: () => {
-      console.log('Disconnected from ElevenLabs');
+      console.log('Disconnected');
       conversationStarted.current = false;
       onStatusChange(false);
     },
     onMessage: (message) => {
-      console.log('Received message from ElevenLabs:', message);
+      console.log('Received message:', message);
     },
     onError: (error) => {
-      console.error('ElevenLabs Error:', error);
+      console.error('Error:', error);
       conversationStarted.current = false;
       onStatusChange(false);
     },
